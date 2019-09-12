@@ -3,7 +3,7 @@ import os
 import cv2
 
 def init():
-    process_images("Original_Images",r".\Processed_Images",(100,100))
+    process_images("Original_Images",r"data\Processed_Images",(100,100))
 
 def process_images(folder,newpath,size):
     #images=[]
