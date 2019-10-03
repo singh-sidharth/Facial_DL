@@ -1,8 +1,9 @@
-from flask import Flask, flash, request, redirect, url_for, render_template, session
+from flask import Flask, flash, request, redirect, url_for, render_template, session, json
 from flask_cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from keras.models import load_model
+from keras.preprocessing.image import load_img, img_to_array
+from keras import backend as K
 import numpy as np
 import os
 
@@ -13,8 +14,11 @@ app.secret_key = "My secret key"
 CORS(app)
 prediction = None
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+#Clear previous models from memory
+K.clear_session()
 #load the model before starting server
 resnet_model = load_model("resnet.h5")
+resnet_model._make_predict_function()
 
 #Predicting the value and removing the temp
 def predict_image(file):
@@ -53,7 +57,7 @@ def predict():
         if file and allowed_file(file.filename):
             predict_image(file)
             flash (True if prediction == 1 else False)
-            return True if prediction == 1 else False
+            return json.dumps(True if prediction == 1 else False)
         else:
             flash('No selected file')
             return redirect(request.url)
