@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test prediction</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" method="post" action="./predict"name='fileInfo'>
+        <p>Upload an image : </p>
+        <br>
+        <input type="file" name="image" id="img" accept="image/*" required>
+        <input type="submit" value="Upload">
+    </form>
+    <hr>
+    <!--img id="blah" src="" alt="Your image will be shown here." /-->
+    <div></div>
+</body>
+<!--script>
+        var form = document.forms.namedItem("fileInfo");
+
+        form.addEventListener('submit', function(ev) {
+
+        var oOutput = document.querySelector("div"),
+            oData = new FormData(form);
+
+        //oData.append("image", "This is some extra data");
+
+        var oReq = new XMLHttpRequest();
+        oReq.open('POST', "http://127.0.0.5:5000/predict", true);
+        oReq.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            oOutput.innerHTML = this.responseText;
+            }
+        };
+        oReq.onload = function(oEvent) {
+        if (oReq.status == 200) {
+            console.log("Uploaded!");
+        } else {
+            oOutput.innerHTML = "Error " + oReq.status + " occurred when trying to upload your file.<br \/>";
+        }
+        };
+        oReq.send(oData);
+        ev.preventDefault();
+        }, false);
+    function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script-->
+</html>
