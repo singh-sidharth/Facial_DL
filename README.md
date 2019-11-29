@@ -1,8 +1,6 @@
 ## Face Spoof Detection
 
-You can use the [editor on GitHub](https://github.com/Soft-Create/Facial_DL/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This project uses IBM Watson Machine Learning to deploy the keras model created for face spoof detection. A raspberry 4 is used as the IOT endpoint to gather image using camera and send it to the deployed model for analysis.
 
 ### Markdown
 
