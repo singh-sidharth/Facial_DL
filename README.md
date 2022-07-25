@@ -1,6 +1,7 @@
 ## Face Spoof Detection
 
-This project uses IBM Watson Machine Learning to deploy the keras model created for face spoof detection. A raspberry 4 is used as the IOT endpoint to gather image using camera and send it to the deployed model for analysis.
+- This project uses IBM Watson Machine Learning to deploy the Keras model created for face spoof detection. <br/>
+- Raspberry Pi 4 is used as the IOT endpoint to gather images using a camera and sending it to the deployed model for analysis.
 
 ### Markdown
 
@@ -28,8 +29,9 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Soft-Create/Facial_DL/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- Your "Pages" uses the layout and style from the Jekyll theme selected in your [repository settings](https://github.com/Soft-Create/Facial_DL/settings). <br/>
+- The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### Having trouble with Pages? 
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Check our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
